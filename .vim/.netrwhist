@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/Mike-THO/Desktop/Holder/ArenaOnlineAPI/api'
 let g:netrw_dirhist_2='/Users/Mike-THO/Desktop/Holder/ArenaOnlineAPI/api/scheduler'
 let g:netrw_dirhist_3='/Users/Mike-THO/Desktop/Holder/ArenaOnlineAPI'
 let g:netrw_dirhist_4='/Users/Mike-THO/Desktop/Something/ArenaOnlineAPI'
 let g:netrw_dirhist_5='/Users/Mike-THO/Desktop/Something/ArenaOnlineAPI/api/lol/summoner'
 let g:netrw_dirhist_6='/Users/Mike-THO/Desktop/Something/ArenaOnlineAPI'
+let g:netrw_dirhist_7='/Users/Mike-THO/Desktop/Random/ArenaCodeBase/ArenaOnlineAPI'

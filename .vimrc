@@ -50,3 +50,6 @@ execute pathogen#infect()
 call pathogen#helptags() 
 syntax on
 filetype plugin indent on
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim " For ctrlp plugin
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip, node_modules/**/*     " Linux/MacOSX"
