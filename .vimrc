@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set wildmode=full " enables a menu at the bottom of the vim/gvim window.
+set wildignore+=*/node_modules/*
 
 set rtp+=~/.vim/bundle/Vundle.vim " Sets runtime path to include vundle and initialize
 call vundle#begin()
@@ -52,4 +53,4 @@ syntax on
 filetype plugin indent on
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim " For ctrlp plugin
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip, node_modules/**/*     " Linux/MacOSX"
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip " Linux/MacOSX"
