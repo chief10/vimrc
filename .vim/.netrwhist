@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/KatVanMeurs/Desktop/MichaelWork/ao.atlas.lol/src/client'
+let g:netrw_dirhist_2='/Users/KatVanMeurs/Desktop/MichaelWork/ao.atlas.lol/src'
+let g:netrw_dirhist_3='/Users/KatVanMeurs/Desktop/MichaelWork/ao.atlas.lol'
