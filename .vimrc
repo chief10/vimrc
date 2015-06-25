@@ -40,6 +40,7 @@ set noswapfile			" Same as above. No more annoying .swp files.
 
 
 "Vundle Plugins
+Plugin 'chriskempson/base16-vim' "for base-16 colorschemes
 Plugin 'gmarik/Vundle.vim' " Used for managing plugins
 Plugin 'cakebaker/scss-syntax.vim' " For proper css indents and highlights
 Plugin 'shime/vim-livedown' " Markdown previewer
@@ -53,3 +54,4 @@ syntax on
 filetype plugin indent on
 set runtimepath^=~/.vim/bundle/ctrlp.vim " For ctrlp plugin
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " Linux/MacOSX"
+
