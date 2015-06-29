@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set wildmode=full " enables a menu at the bottom of the vim/gvim window.
-set wildignore+=*/node_modules/*
+set wildignore+=*/node_modules/*,**/bower_components/**/*
 
 set rtp+=~/.vim/bundle/Vundle.vim " Sets runtime path to include vundle and initialize
 call vundle#begin()
