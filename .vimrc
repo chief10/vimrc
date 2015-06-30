@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set wildmode=full " enables a menu at the bottom of the vim/gvim window.
-set wildignore+=*/node_modules/*
+set wildignore+=*/node_modules/*,*/bower_components/*
 
 set rtp+=~/.vim/bundle/Vundle.vim " Sets runtime path to include vundle and initialize
 call vundle#begin()
@@ -42,11 +42,13 @@ set noswapfile			" Same as above. No more annoying .swp files.
 "Vundle Plugins
 Plugin 'chriskempson/base16-vim' "for base-16 colorschemes
 Plugin 'gmarik/Vundle.vim' " Used for managing plugins
+Plugin 'bling/vim-airline' " Used for better info at bottom of screen
 Plugin 'cakebaker/scss-syntax.vim' " For proper css indents and highlights
 Plugin 'shime/vim-livedown' " Markdown previewer
 Plugin 'scrooloose/nerdcommenter' " For easy commenting;
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+Plugin 'Valloric/MatchTagAlways' " For html-tag matching
 
 call vundle#end()            " required
 filetype plugin indent on    " required
