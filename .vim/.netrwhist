@@ -1,9 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineWebPreAlpha'
-let g:netrw_dirhist_2='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineWebPreAlpha/sassy'
-let g:netrw_dirhist_3='/Users/KatVanMeurs/Desktop/MichaelWork/ao.atlas.lol'
-let g:netrw_dirhist_4='/Users/KatVanMeurs/Desktop/MichaelWork/ao.atlas.lol/src'
-let g:netrw_dirhist_5='/Users/KatVanMeurs/Desktop/MichaelWork/ao.atlas.lol/src/client'
-let g:netrw_dirhist_6='/Users/KatVanMeurs/Desktop/MichaelWork/ao.atlas.lol/src/client/app'
-let g:netrw_dirhist_7='/Users/KatVanMeurs/Desktop/MichaelWork/ao.atlas.lol/src/client/app/ao-faq'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/KatVanMeurs/Desktop/MichaelWork/Code/losto'
+let g:netrw_dirhist_2='/Users/KatVanMeurs/Desktop/MichaelWork/PersonalSites/DevShorts'
+let g:netrw_dirhist_3='/Users/KatVanMeurs/Desktop/MichaelWork/PersonalSites/DevShorts/src'
+let g:netrw_dirhist_4='/Users/KatVanMeurs/Desktop/MichaelWork/PersonalSites/DevShorts/src/_posts'
+let g:netrw_dirhist_5='/Users/KatVanMeurs/Desktop/MichaelWork/PersonalSites/DevShorts'
