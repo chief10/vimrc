@@ -45,6 +45,9 @@ Plugin 'gmarik/Vundle.vim' " Used for managing plugins
 Plugin 'cakebaker/scss-syntax.vim' " For proper css indents and highlights
 Plugin 'shime/vim-livedown' " Markdown previewer
 Plugin 'scrooloose/nerdcommenter' " For easy commenting;
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
