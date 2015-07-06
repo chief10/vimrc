@@ -40,6 +40,7 @@ set noswapfile			" Same as above. No more annoying .swp files.
 
 
 "Vundle Plugins
+Plugin 'JulesWang/css.vim' " Needed for vim version 7.3
 Plugin 'chriskempson/base16-vim' "for base-16 colorschemes
 Plugin 'gmarik/Vundle.vim' " Used for managing plugins
 Plugin 'bling/vim-airline' " Used for better info at bottom of screen

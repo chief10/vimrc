@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app/home'
-let g:netrw_dirhist_2='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app/home/widgets/trend-stats'
-let g:netrw_dirhist_3='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app/home'
-let g:netrw_dirhist_4='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app'
-let g:netrw_dirhist_5='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app/widgets'
-let g:netrw_dirhist_6='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app'
-let g:netrw_dirhist_7='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app/home'
-let g:netrw_dirhist_8='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app/home/widgets'
-let g:netrw_dirhist_9='/Users/KatVanMeurs/Desktop/MichaelWork/ArenaOnlineLol/src/client/app/home/widgets/trend-stats'
+let g:netrw_dirhist_cnt =0
