@@ -3,8 +3,9 @@ filetype off                  " required
 
 set wildmode=full " enables a menu at the bottom of the vim/gvim window.
 set wildignore+=*/node_modules/*,*/bower_components/*
-
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip " Linux/MacOSX
 set rtp+=~/.vim/bundle/Vundle.vim " Sets runtime path to include vundle and initialize
+set runtimepath^=~/.vim/bundle/ctrlp.vim " For ctrlp plugin
 call vundle#begin()
 
 syntax enable           " enable syntax processing
@@ -59,6 +60,4 @@ execute pathogen#infect()
 call pathogen#helptags() 
 syntax on
 filetype plugin indent on
-set runtimepath^=~/.vim/bundle/ctrlp.vim " For ctrlp plugin
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip " Linux/MacOSX"
 
