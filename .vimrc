@@ -41,6 +41,7 @@ set noswapfile			" Same as above. No more annoying .swp files.
 
 
 "Vundle Plugins
+Plugin 'tpope/vim-surround' " for being able to change surrounding text.
 Plugin 'JulesWang/css.vim' " Needed for vim version 7.3
 Plugin 'chriskempson/base16-vim' "for base-16 colorschemes
 Plugin 'gmarik/Vundle.vim' " Used for managing plugins
