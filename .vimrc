@@ -9,8 +9,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim " For ctrlp plugin
 call vundle#begin()
 
 syntax enable           " enable syntax processing
-set background=dark
-colorscheme Hybrid		" awesome colorscheme
+set background=light
+colorscheme summerfruit256 " awesome colorscheme
 set tabstop=2       	" number of visual spaces per TAB
 
 " Keymappings
@@ -22,7 +22,10 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>") " Allows use of tab for expansion
+
+"autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+"autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+"autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
 "UI CONFIG
 set number              " show line numbers
@@ -41,6 +44,12 @@ set noswapfile			" Same as above. No more annoying .swp files.
 
 
 "Vundle Plugins
+Plugin 'felixhummel/setcolors.vim' " Used for easily previewing colorschemes in vim.
+Plugin 'flazz/vim-colorschemes' " Package of vim colorschemes.
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround' " for being able to change surrounding text.
 Plugin 'JulesWang/css.vim' " Needed for vim version 7.3
 Plugin 'chriskempson/base16-vim' "for base-16 colorschemes
@@ -52,6 +61,12 @@ Plugin 'scrooloose/nerdcommenter' " For easy commenting;
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'Valloric/MatchTagAlways' " For html-tag matching
+Plugin 'pangloss/vim-javascript'
+
+" single colors
+Plugin 'nelstrom/vim-mac-classic-theme'
+"Plugin 'maksimr/vim-jsbeautify'
+"Plugin 'einars/js-beautify'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
