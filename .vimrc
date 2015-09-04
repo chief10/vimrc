@@ -1,7 +1,12 @@
+" Pathogen
+execute pathogen#infect()
+call pathogen#helptags() 
+syntax on
+filetype plugin indent on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set wildmode=full " enables a menu at the bottom of the vim/gvim window.
+set wildmode=list:longest,list:full " enables a menu at the bottom of the vim/gvim window.
 set wildignore+=*/node_modules/*,*/bower_components/*
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " Linux/MacOSX
 set rtp+=~/.vim/bundle/Vundle.vim " Sets runtime path to include vundle and initialize
@@ -10,8 +15,10 @@ call vundle#begin()
 
 syntax enable           " enable syntax processing
 set background=light
-colorscheme summerfruit256 " awesome colorscheme
+"colorscheme summerfruit256 " awesome colorscheme
+colorscheme hybrid
 set tabstop=2       	" number of visual spaces per TAB
+set shiftwidth=2 " How many spaces are used when indenting using > and <
 
 " Keymappings
 noremap <Up> <NOP>
@@ -36,7 +43,6 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
-set number              " show line numbers
 
 "Disables
 set nobackup            " Makes it so that vim doesn't create a backup.
@@ -44,13 +50,18 @@ set noswapfile			" Same as above. No more annoying .swp files.
 
 
 "Vundle Plugins
+Plugin 'wavded/vim-stylus' " for stylus support within vim.
+Plugin 'mattn/emmet-vim' 
+Plugin 'ervandew/supertab' " better tab completion.
 Plugin 'felixhummel/setcolors.vim' " Used for easily previewing colorschemes in vim.
 Plugin 'flazz/vim-colorschemes' " Package of vim colorschemes.
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'chief10/vim-react-snippets' " My snippets
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround' " for being able to change surrounding text.
+Plugin 'ap/vim-css-color' " Preview colors in css while editing.
 Plugin 'JulesWang/css.vim' " Needed for vim version 7.3
 Plugin 'chriskempson/base16-vim' "for base-16 colorschemes
 Plugin 'gmarik/Vundle.vim' " Used for managing plugins
@@ -62,18 +73,25 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'Valloric/MatchTagAlways' " For html-tag matching
 Plugin 'pangloss/vim-javascript'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tmhedberg/matchit'
+Plugin 'jiangmiao/auto-pairs' " for making vim auto-close brackets, braces and what not.
+Plugin 'maksimr/vim-jsbeautify'
 
 " single colors
 Plugin 'nelstrom/vim-mac-classic-theme'
-"Plugin 'maksimr/vim-jsbeautify'
 "Plugin 'einars/js-beautify'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Pathogen
-execute pathogen#infect()
-call pathogen#helptags() 
-syntax on
-filetype plugin indent on
 
+" Keyboard remappings go under here.
+au BufNewFile,BufRead *.ejs set filetype=html
+
+" vim-livedown configuration
+" should the browser window pop-up upon previewing
+ let g:livedown_open = 1 
+
+" the port on which Livedown server will run
+ let g:livedown_port = 1337
