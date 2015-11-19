@@ -12,24 +12,31 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip " Linux/MacOSX
 set rtp+=~/.vim/bundle/Vundle.vim " Sets runtime path to include vundle and initialize
 set runtimepath^=~/.vim/bundle/ctrlp.vim " For ctrlp plugin
 au BufRead,BufNewFile *.scss set filetype=scss.css
+au BufRead,BufNewFile *.ejs setfiletype html " Treats ejs files as if they were html;
 call vundle#begin()
 
 set tabstop=2       	" number of visual spaces per TAB
 set shiftwidth=2 " How many spaces are used when indenting using > and <
+set backspace=indent,eol,start
 
 " Keymappings
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
 
-"autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-"autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
-"autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
 
 "UI CONFIG
 set number              " show line numbers
@@ -40,7 +47,7 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
-
+set hidden              " Allows me to switch buffers without having to save.
 "Disables
 set nobackup            " Makes it so that vim doesn't create a backup.
 set noswapfile			" Same as above. No more annoying .swp files.
@@ -49,14 +56,16 @@ set noswapfile			" Same as above. No more annoying .swp files.
 "Vundle Plugins
 "
 "Python plugins that require some config.
-" Plugin 'Valloric/YouCompleteMe'
-" Plugin 'marijnh/tern_for_vim'
+	"Plugin 'Valloric/YouCompleteMe'
+	"Plugin 'marijnh/tern_for_vim'
 " End Python Plugins
+"Plugin 'SirVer/ultisnips' " For ultisnips
 Plugin 'ervandew/supertab'
 Plugin 'wavded/vim-stylus' " for stylus support within vim.
 Plugin 'mattn/emmet-vim' 
 Plugin 'felixhummel/setcolors.vim' " Used for easily previewing colorschemes in vim.
 Plugin 'flazz/vim-colorschemes' " Package of vim colorschemes.
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'} " Another vim colorscheme
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -79,11 +88,22 @@ Plugin 'maksimr/vim-jsbeautify'
 " Interface Plugins
 Plugin 'bling/vim-airline'
 
+" Below are options for the above vim-airline plugin
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+	"Better file navigation
+"Plugin 'tpope/vim-vinegar'
 " PHP Specific plugins 
 Plugin 'StanAngeloff/php.vim'
 " single colors
 Plugin 'nelstrom/vim-mac-classic-theme'
 "Plugin 'einars/js-beautify'
+
+" Triggers for ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -94,4 +114,9 @@ au BufNewFile,BufRead *.ejs set filetype=html
 syntax enable           " enable syntax processing
 set background=light
 "colorscheme summerfruit256 " awesome colorscheme
-colorscheme hybrid
+"colorscheme hybrid
+color dracula
+
+" Abreviations
+ab omdb https://image.tmdb.org/t/p/w370/
+ab omdbsmall https://image.tmdb.org/t/p/w185
