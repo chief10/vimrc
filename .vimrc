@@ -1,7 +1,8 @@
 syntax on
-filetype plugin indent on
 set nocompatible              " be iMproved, required
 filetype off                  " required
+filetype indent on
+filetype plugin indent on
 
 set wildmode=full " enables a menu at the bottom of the vim/gvim window.
 set wildignore+=*/node_modules/*,*/bower_components/*,*/modules/*
@@ -13,7 +14,9 @@ au BufRead,BufNewFile *.scss set filetype=scss.css
 call vundle#begin()
 
 set tabstop=2       	" number of visual spaces per TAB
+set softtabstop=2
 set shiftwidth=2 " How many spaces are used when indenting using > and <
+set expandtab
 set backspace=indent,eol,start
 
 
@@ -90,7 +93,7 @@ Plugin 'jiangmiao/auto-pairs' " for making vim auto-close brackets, braces and w
 Plugin 'leafgarland/typescript-vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'tpope/vim-fugitive' " Git wrapper for vim.
-Plugin 'eiginn/netrw'
+"Plugin 'eiginn/netrw'
 " Interface Plugins
 Plugin 'bling/vim-airline'
 
@@ -117,7 +120,6 @@ let g:ctrlp_show_hidden = 1
 
 
 call vundle#end()            " required
-filetype plugin indent on    " required
 
 function Scramble()
     %!gpg -q --cipher-algo aes256 --symmetric --armor 2>/dev/null
