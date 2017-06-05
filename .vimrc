@@ -8,8 +8,10 @@ filetype off                  " required
 filetype indent on
 
 set wildmode=full " enables a menu at the bottom of the vim/gvim window.
-set wildignore+=*/node_modules/*,*/bower_components/*,*/modules/*,*/custom/*,*/bundles/*,*/.python.env/*,*/.fsdb/*
+set wildignore+=*/node_modules/*,*/bower_components/*,*/modules/*,**/*/custom/*,*/bundles/*,*/.python.env/*,*/.fsdb/*,*/includes/*,*/trunk/admin/*
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " Linux/MacOSX
+set wildignore+=*/ad/**
+
 set rtp+=~/.vim/bundle/Vundle.vim " Sets runtime path to include vundle and initialize
 set runtimepath^=~/.vim/bundle/ctrlp.vim " For ctrlp plugin
 
@@ -109,6 +111,7 @@ Plugin 'Shougo/vimproc.vim'
 " Interface Plugins
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'scrooloose/nerdtree'
 
 " single colors
 Plugin 'michalbachowski/vim-wombat256mod'
@@ -141,6 +144,16 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Allows Ctrl + P to find hidden files.
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+"if executable('ag')
+    "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  "endif
+
+" NerdTree config
+"autocmd vimenter * NERDTree
+"map <C-n> :NERDTreeToggle<CR>
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 " Disable Background Color Erase (BCE) so that color schemes work
 " properly within 256-color terminals
